@@ -6,4 +6,9 @@ This assignment is set up as a statistical laboratory, we will perform simulatio
 
 For oppgåveteksten se [link](https://dhammarstrom.github.io/quant-methods-workshops/assignment-3.html).
 
-Mappestruktur:
+## Beskrivelser av mapper:
+
+1. **R**: R-scripts.
+2. **data**: Aktuelle datafiler, f.eks: .xlsx filer som inneholder datasett.
+3. **resources**: .bib-filer, referansestiler (csl-filer).
+4. **figures***: Figurer, grafer eller bilder. 
