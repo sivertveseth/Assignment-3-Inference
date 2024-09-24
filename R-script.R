@@ -33,3 +33,43 @@ ggplot(data.frame(x = x_vals), aes(x = x)) +
   labs(title = "Observed t-value plotted in the null-hypothesis t-distribution", 
        x = "t", y = "Density f(t)") +
   theme_minimal()
+
+# Lager data frames for å lagre modell estimater
+results_8 <- data.frame(estimate = rep(NA, 1000), 
+                        se = rep(NA, 1000), 
+                        pval = rep(NA, 1000), 
+                        n = 8)  
+
+results_40 <- data.frame(estimate = rep(NA, 1000), 
+                         se = rep(NA, 1000), 
+                         pval = rep(NA, 1000), 
+                         n = 40)
+
+# En løkke som for å hente ut 1000 prøver(samples), hver iterasjon (i) vil 
+# hente ut en ny prøve fra populasjonen
+
+for(i in 1:1000) {
+  
+  # Henter ut en prøve 
+  samp1 <- data.frame(y = sample(population, 8, replace = FALSE))
+  samp2 <- data.frame(y = sample(population, 40, replace = FALSE))
+  
+  # Lager en lineær modell
+  m1 <- lm(y ~ 1, data = samp1)
+  m2 <- lm(y ~ 1, data = samp2)
+  
+  # Henter ut verdier fra modellen
+  results_8[i, 1] <- coef(summary(m1))[1, 1]
+  results_8[i, 2] <- coef(summary(m1))[1, 2]
+  results_8[i, 3] <- coef(summary(m1))[1, 4]
+  
+  results_40[i, 1] <- coef(summary(m2))[1, 1]
+  results_40[i, 2] <- coef(summary(m2))[1, 2]
+  results_40[i, 3] <- coef(summary(m2))[1, 4]
+  
+  
+}
+
+# Lagrer resultatene i en data frame
+
+results <- bind_rows(results_8, results_40)
