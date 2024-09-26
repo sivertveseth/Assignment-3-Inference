@@ -1,4 +1,63 @@
 # Laster inn nødvendige pakker
+library(ggplot2)
+library(gridExtra)
+
+# Definer t-verdier for begge utvalg
+t_value1 <- 1.47  # t-verdi for samp1
+t_value2 <- 3.953  # t-verdi for samp2
+df1 <- 7   # Antall frihetsgrader for samp1 (n-1, her 8-1=7)
+df2 <- 39  # Antall frihetsgrader for samp2 (n-1, her 40-1=39)
+
+# Lag dataramme for x-verdier
+x_vals <- seq(-5, 5, length.out = 1000)
+
+# Lag plot for samp1
+plot1 <- ggplot(data.frame(x = x_vals), aes(x)) +
+  # Fyll venstre hale for samp1
+  stat_function(fun = dt, args = list(df = df1), xlim = c(-5, -t_value1), geom = "area", fill = "gray", alpha = 0.5) +
+  # Fyll høyre hale for samp1
+  stat_function(fun = dt, args = list(df = df1), xlim = c(t_value1, 5), geom = "area", fill = "gray", alpha = 0.5) +
+  # Tegn hele t-fordelingskurven for samp1
+  stat_function(fun = dt, args = list(df = df1)) +
+  # Legg til den observerte t-verdien som en vertikal linje
+  geom_vline(xintercept = t_value1, color = "red", linetype = "dashed") +
+  # Annoter t-verdien for samp1
+  annotate("text", x = t_value1 + 0.3, y = 0.2, label = "Observed t (samp1)", angle = -90, size = 2.8) +
+  labs(title = "t-distribution for samp1", x = "t", y = "Density f(t)") +
+  theme_classic() +
+  xlim(-5, 5)
+
+# Print plot1
+print(plot1)
+
+# Lag plot for samp2
+plot2 <- ggplot(data.frame(x = x_vals), aes(x)) +
+  # Fyll venstre hale for samp2
+  stat_function(fun = dt, args = list(df = df2), xlim = c(-5, -t_value2), geom = "area", fill = "lightblue", alpha = 0.5) +
+  # Fyll høyre hale for samp2
+  stat_function(fun = dt, args = list(df = df2), xlim = c(t_value2, 5), geom = "area", fill = "lightblue", alpha = 0.5) +
+  # Tegn hele t-fordelingskurven for samp2
+  stat_function(fun = dt, args = list(df = df2)) +
+  # Legg til den observerte t-verdien som en vertikal linje
+  geom_vline(xintercept = t_value2, color = "red", linetype = "dashed") +
+  # Annoter t-verdien for samp2
+  annotate("text", x = t_value2 + 0.3, y = 0.2, label = "Observed t (samp2)", angle = -90, size = 2.8) +
+  labs(title = "t-distribution for samp2", x = "t", y = "Density f(t)") +
+  theme_classic() +
+  xlim(-6, 6)
+
+# Print plot2
+print(plot2)
+
+# Kombiner plottene ved siden av hverandre
+combined_plot <- grid.arrange(plot1, plot2, ncol = 2)
+
+# Vis det kombinerte plottet
+print(combined_plot)
+
+-----------------------------------------------------------
+
+# Laster inn nødvendige pakker
 library(tidyverse)
 
 
