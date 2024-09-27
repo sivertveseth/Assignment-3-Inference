@@ -88,6 +88,10 @@ div.csl-indent {
 <script src="assignment3_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="assignment3_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="assignment3_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="assignment3_files/libs/kePrint-0.0.1/kePrint.js"></script>
+
+<link href="assignment3_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -121,10 +125,31 @@ window.Quarto = {
 
 </head>
 
-<body class="fullcontent">
+<body>
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#setter-opp-simuleringen-for-oppgåve-1-4" id="toc-setter-opp-simuleringen-for-oppgåve-1-4" class="nav-link active" data-scroll-target="#setter-opp-simuleringen-for-oppgåve-1-4"><span class="header-section-number">1</span> Setter opp simuleringen for oppgåve 1-4</a>
+  <ul class="collapse">
+  <li><a href="#spm-1-explain-the-estimate-se-t-value-and-p-value-from-the-regression-models-that-we-created-previously-m1-and-m2." id="toc-spm-1-explain-the-estimate-se-t-value-and-p-value-from-the-regression-models-that-we-created-previously-m1-and-m2." class="nav-link" data-scroll-target="#spm-1-explain-the-estimate-se-t-value-and-p-value-from-the-regression-models-that-we-created-previously-m1-and-m2."><span class="header-section-number">1.1</span> Spm 1: Explain the estimate, SE, <em>t</em>-value, and <em>p</em>-value from the regression models that we created previously (<code>m1</code> and <code>m2</code>).</a></li>
+  <li><a href="#spm-2-discuss-what-contributes-to-the-different-results-in-the-two-studies-m1-and-m2." id="toc-spm-2-discuss-what-contributes-to-the-different-results-in-the-two-studies-m1-and-m2." class="nav-link" data-scroll-target="#spm-2-discuss-what-contributes-to-the-different-results-in-the-two-studies-m1-and-m2."><span class="header-section-number">1.2</span> Spm 2: Discuss what contributes to the different results in the two studies (<code>m1</code> and <code>m2</code>).</a></li>
+  <li><a href="#spm-3-why-do-we-use-the-shaded-area-in-the-lower-and-upper-tail-of-the-t-distribution-see-fig-samp1." id="toc-spm-3-why-do-we-use-the-shaded-area-in-the-lower-and-upper-tail-of-the-t-distribution-see-fig-samp1." class="nav-link" data-scroll-target="#spm-3-why-do-we-use-the-shaded-area-in-the-lower-and-upper-tail-of-the-t-distribution-see-fig-samp1."><span class="header-section-number">1.3</span> Spm 3: Why do we use the shaded area in the lower and upper tail of the t-distribution (See Figure&nbsp;1).</a></li>
+  </ul></li>
+  <li><a href="#simulering-til-spørsmål-4-7" id="toc-simulering-til-spørsmål-4-7" class="nav-link" data-scroll-target="#simulering-til-spørsmål-4-7"><span class="header-section-number">2</span> Simulering til spørsmål 4-7</a>
+  <ul class="collapse">
+  <li><a href="#spm-4-calculate-the-standard-deviation-of-the-estimate-variable-and-the-average-of-the-se-variable-for-each-of-the-study-sample-sizes-8-and-40.-explain-why-these-numbers-are-very-similar.-how-can-you-define-the-standard-error-se-in-light-of-these-calculations" id="toc-spm-4-calculate-the-standard-deviation-of-the-estimate-variable-and-the-average-of-the-se-variable-for-each-of-the-study-sample-sizes-8-and-40.-explain-why-these-numbers-are-very-similar.-how-can-you-define-the-standard-error-se-in-light-of-these-calculations" class="nav-link" data-scroll-target="#spm-4-calculate-the-standard-deviation-of-the-estimate-variable-and-the-average-of-the-se-variable-for-each-of-the-study-sample-sizes-8-and-40.-explain-why-these-numbers-are-very-similar.-how-can-you-define-the-standard-error-se-in-light-of-these-calculations"><span class="header-section-number">2.1</span> Spm 4: Calculate the standard deviation of the estimate variable, and the average of the se variable for each of the study sample sizes (8 and 40). Explain why these numbers are very similar. How can you define the Standard Error (SE) in light of these calculations?</a></li>
+  <li><a href="#spm-5-create-a-histogram-see-example-code-below-of-the-p-values-from-each-study-sample-size.-how-do-you-interpret-these-histograms-what-do-they-tell-you-about-the-effect-of-sample-size-on-statistical-power" id="toc-spm-5-create-a-histogram-see-example-code-below-of-the-p-values-from-each-study-sample-size.-how-do-you-interpret-these-histograms-what-do-they-tell-you-about-the-effect-of-sample-size-on-statistical-power" class="nav-link" data-scroll-target="#spm-5-create-a-histogram-see-example-code-below-of-the-p-values-from-each-study-sample-size.-how-do-you-interpret-these-histograms-what-do-they-tell-you-about-the-effect-of-sample-size-on-statistical-power"><span class="header-section-number">2.2</span> Spm 5: Create a histogram (see example code below) of the p-values from each study sample-size. How do you interpret these histograms, what do they tell you about the effect of sample size on statistical power?</a></li>
+  <li><a href="#spm-6-calculate-the-number-of-studies-from-each-sample-size-that-declare-a-statistical-significant-effect-specify-a-threshold-for-your-alpha-significance-level." id="toc-spm-6-calculate-the-number-of-studies-from-each-sample-size-that-declare-a-statistical-significant-effect-specify-a-threshold-for-your-alpha-significance-level." class="nav-link" data-scroll-target="#spm-6-calculate-the-number-of-studies-from-each-sample-size-that-declare-a-statistical-significant-effect-specify-a-threshold-for-your-alpha-significance-level."><span class="header-section-number">2.3</span> Spm 6: Calculate the number of studies from each sample size that declare a statistical significant effect (specify a threshold for your <span class="math inline">\(\alpha\)</span>, significance level).</a></li>
+  <li><a href="#spm-7-using-the-pwr-package-calculate-the-power-of-a-one-sample-t-test-with-a-effect-size-of-1.53-your-specified-significance-level-and-sample-sizes-8-and-40.-explain-the-results-in-the-light-of-your-simulations." id="toc-spm-7-using-the-pwr-package-calculate-the-power-of-a-one-sample-t-test-with-a-effect-size-of-1.53-your-specified-significance-level-and-sample-sizes-8-and-40.-explain-the-results-in-the-light-of-your-simulations." class="nav-link" data-scroll-target="#spm-7-using-the-pwr-package-calculate-the-power-of-a-one-sample-t-test-with-a-effect-size-of-1.53-your-specified-significance-level-and-sample-sizes-8-and-40.-explain-the-results-in-the-light-of-your-simulations."><span class="header-section-number">2.4</span> Spm 7: Using the pwr package, calculate the power of a one-sample t-test, with a effect size of 1.5/3, your specified significance level and sample sizes 8 and 40. Explain the results in the light of your simulations.</a></li>
+  <li><a href="#spm-8-with-a-significance-level-of-5-how-many-studies-would-give-you-a-false-positive-result-if-you-did-many-repeated-studies" id="toc-spm-8-with-a-significance-level-of-5-how-many-studies-would-give-you-a-false-positive-result-if-you-did-many-repeated-studies" class="nav-link" data-scroll-target="#spm-8-with-a-significance-level-of-5-how-many-studies-would-give-you-a-false-positive-result-if-you-did-many-repeated-studies"><span class="header-section-number">2.5</span> Spm 8: With a significance level of 5%, how many studies would give you a “false positive” result if you did many repeated studies?</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -152,8 +177,8 @@ window.Quarto = {
 </header>
 
 
-<section id="sette-opp-simuleringen" class="level2">
-<h2 class="anchored" data-anchor-id="sette-opp-simuleringen">Sette opp simuleringen</h2>
+<section id="setter-opp-simuleringen-for-oppgåve-1-4" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="setter-opp-simuleringen-for-oppgåve-1-4"><span class="header-section-number">1</span> Setter opp simuleringen for oppgåve 1-4</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -215,13 +240,13 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 Residual standard error: 3.019 on 39 degrees of freedom</code></pre>
 </div>
 </div>
-<p>Under kan man se en …. som viser t-fordelingen av dei ulike lineære modellene, der det skyggelagte området er dei observerte p-verdiene.</p>
+<p>Under i <a href="#fig-samp1" class="quarto-xref">Figure&nbsp;1</a> vises t-fordelingen av dei ulike lineære modellene, der det skyggelagte området visualiserer sannsyligheten for å observere en t-verdi som er like ekstrem eller mer ekstrem enn den observerte t-verdien i <code>samp1</code>, gitt at nullhypotesen om ingen endring er sann.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Definer t-verdier for begge utvalg</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>t_value1 <span class="ot">&lt;-</span> <span class="fl">1.47</span>  <span class="co"># t-verdi for samp1</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>t_value2 <span class="ot">&lt;-</span> <span class="fl">3.953</span>  <span class="co"># t-verdi for samp2</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>t_value2 <span class="ot">&lt;-</span> <span class="fl">3.276</span>  <span class="co"># t-verdi for samp2</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> <span class="dv">7</span>   <span class="co"># Antall frihetsgrader for samp1 (n-1, her 8-1=7)</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> <span class="dv">39</span>  <span class="co"># Antall frihetsgrader for samp2 (n-1, her 40-1=39)</span></span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
@@ -245,60 +270,30 @@ Residual standard error: 3.019 on 39 degrees of freedom</code></pre>
 <span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>)</span>
 <span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Print plot1</span></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(plot1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(plot1)</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Utregne p-verdier for m1 og m2</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pt</span>(t_value1, <span class="at">df =</span> df1, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pt</span>(t_value2, <span class="at">df =</span> df2, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="assignment3_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+<div id="fig-samp1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-samp1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assignment3_files/figure-html/fig-samp1-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-samp1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: t-fordeling av <code>samp1</code>
+</figcaption>
 </figure>
 </div>
 </div>
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Utregne p-verdier for m1</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pt</span>(t_value1, <span class="at">df =</span> df1, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print p-verdier</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(p1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.1850231</code></pre>
 </div>
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Lag plot for samp2</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>plot2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="fu">data.frame</span>(<span class="at">x =</span> x_vals), <span class="fu">aes</span>(x)) <span class="sc">+</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Fyll venstre hale for samp2</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_function</span>(<span class="at">fun =</span> dt, <span class="at">args =</span> <span class="fu">list</span>(<span class="at">df =</span> df2), <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="sc">-</span>t_value2), <span class="at">geom =</span> <span class="st">"area"</span>, <span class="at">fill =</span> <span class="st">"lightblue"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Fyll høyre hale for samp2</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_function</span>(<span class="at">fun =</span> dt, <span class="at">args =</span> <span class="fu">list</span>(<span class="at">df =</span> df2), <span class="at">xlim =</span> <span class="fu">c</span>(t_value2, <span class="dv">5</span>), <span class="at">geom =</span> <span class="st">"area"</span>, <span class="at">fill =</span> <span class="st">"lightblue"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Tegn hele t-fordelingskurven for samp2</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_function</span>(<span class="at">fun =</span> dt, <span class="at">args =</span> <span class="fu">list</span>(<span class="at">df =</span> df2)) <span class="sc">+</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Legg til den observerte t-verdien som en vertikal linje</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> t_value2, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Annoter t-verdien for samp2</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> t_value2 <span class="sc">+</span> <span class="fl">0.3</span>, <span class="at">y =</span> <span class="fl">0.2</span>, <span class="at">label =</span> <span class="st">"Observed t (samp2)"</span>, <span class="at">angle =</span> <span class="sc">-</span><span class="dv">90</span>, <span class="at">size =</span> <span class="fl">2.8</span>) <span class="sc">+</span></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"t-distribution for samp2"</span>, <span class="at">x =</span> <span class="st">"t"</span>, <span class="at">y =</span> <span class="st">"Density f(t)"</span>) <span class="sc">+</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="sc">-</span><span class="dv">6</span>, <span class="dv">6</span>)</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Utregne p-verdi for m2</span></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pt</span>(t_value2, <span class="at">df =</span> df2, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Print p-verdier</span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(p2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.0003150928</code></pre>
-</div>
-</div>
-<p>Svar på spørsmålene:</p>
-<ol type="1">
-<li>Explain the estimate, SE, <em>t</em>-value, and <em>p</em>-value from the regression models that we created previously (<code>m1</code> and <code>m2</code>).</li>
-</ol>
-<p><u><strong>Estimate</strong></u>: Den estimerte koeffisienten representerer i regresjonsanalyser med to variabler kor mykje vi kan forvente at den avhengige variabelen endrer seg per endring i den uavhengie variabelen (<span class="citation" data-cites="spieg2019">Spiegelhalter (<a href="#ref-spieg2019" role="doc-biblioref">2019</a>)</span>, s.275). I våre datasettene over, vil <em>estimate</em> derimot korrespondere til gjennomsnittet av alle verdiene i dei ulike utvalgene, og gi oss et estimat på gjennomsnittet til populasjonen. I samp1 er utvalgets gjennomsnitt 1.84 noe som er litt ifra populasjonens faktiske gjennomsnitt på 1.5, men når vi øker størrelsen på utvalget, slik som i samp2, ser vi at gjennomsnittet nærmer seg veldig populasjonen: samp2 (1.564161) vs <span class="math inline">\(\mu\)</span>(1.5).</p>
-<p><u><strong>Std.Error</strong></u>: Standardfeilen måler kor mykje estimatet forventes å variere fra utvalg til utvalg (<span class="citation" data-cites="spieg2019">Spiegelhalter (<a href="#ref-spieg2019" role="doc-biblioref">2019</a>)</span>, s.231, 403-4). I vårt tilfelle, vil standardfeilen si kor mykje gjennomsnittet i utvalget vårt er forventet å variere fra utvalg til utvalg grunnet tilfeldig variasjon i datatene. SE beregnes slik:</p>
+<section id="spm-1-explain-the-estimate-se-t-value-and-p-value-from-the-regression-models-that-we-created-previously-m1-and-m2." class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="spm-1-explain-the-estimate-se-t-value-and-p-value-from-the-regression-models-that-we-created-previously-m1-and-m2."><span class="header-section-number">1.1</span> Spm 1: Explain the estimate, SE, <em>t</em>-value, and <em>p</em>-value from the regression models that we created previously (<code>m1</code> and <code>m2</code>).</h3>
+<p><u><strong>Estimate</strong></u>: Den estimerte koeffisienten representerer i regresjonsanalyser med to variabler kor mykje vi kan forvente at den avhengige variabelen endrer seg per endring i den uavhengie variabelen (<span class="citation" data-cites="spieg2019">Spiegelhalter (<a href="#ref-spieg2019" role="doc-biblioref">2019</a>)</span>, s.275). I våre “intercept-only” modeller, vil <em>estimate</em> derimot korrespondere til gjennomsnittet av alle verdiene i dei ulike utvalgene, og gi oss et estimat på gjennomsnittet til populasjonen.</p>
+<p>I <code>samp1</code> er utvalgets gjennomsnitt 1.84 noe som er litt ifra populasjonens faktiske gjennomsnitt på 1.5. Når vi øker størrelsen på utvalget, slik som i <code>samp2</code>, ser vi at gjennomsnittet nærmer seg populasjonen: samp2 = 1.564 vs <span class="math inline">\(\mu\)</span> = 1.5.</p>
+<p><u><strong>Std.Error</strong></u>: Standardfeilen måler kor mykje <em>estimate</em> forventes å variere fra utvalg til utvalg (<span class="citation" data-cites="spieg2019">Spiegelhalter (<a href="#ref-spieg2019" role="doc-biblioref">2019</a>)</span>, s.231, 403-404). Standardfeilen sier dermed kor mykje gjennomsnittet er forventet å variere fra utvalg til utvalg grunnet tilfeldig variasjon i datatene. For eksempel sier standardfeilen i <code>m2</code> at gjennomsnittet vil variere med 0.4774117 for hvert utvalg. SE beregnes slik:</p>
 <p><span class="math display">\[
 \text{SE} = \frac{s}{\sqrt{n}}
 \]</span></p>
@@ -307,7 +302,414 @@ Residual standard error: 3.019 on 39 degrees of freedom</code></pre>
 <li>(s ) er standardavviket til utvalget</li>
 <li>( n ) er antall observasjoner</li>
 </ul>
+<p><u><strong>t-value</strong></u>: <em>t</em>-verdien, eller <em>t</em>-statistikk, beregnes som <span class="math inline">\(t = \frac{\text{estimate}}{\text{standard error}}\)</span>, og kan forstås som kor mange standardfeil estimatet er fra 0 (<span class="citation" data-cites="spieg2019">Spiegelhalter (<a href="#ref-spieg2019" role="doc-biblioref">2019</a>)</span>, s.276-277). Den vil hjelpe oss med å avgjøre om det er fornuftig å anta at vårt gjennomsnitt er forskjellig fra 0, og om null-hypotesen burde forkastes eller godtas (<span class="citation" data-cites="spieg2019">Spiegelhalter (<a href="#ref-spieg2019" role="doc-biblioref">2019</a>)</span>, s.276-277). Dess høgere t-verdien er, dess sikrere kan vi være på at estimatet vårt, her <em>y</em>, oppsto ved tilfeldig variasjon gitt at nullhypotesen var sann.</p>
+<p><u><strong>p-value</strong></u>: Gitt at vi veit <em>t</em>-verdien og størrelsen på utvalget, kan vi benytte oss av R til å regne ut <em>p</em>-verdien, (se <code>summary()</code> eller <code>p1</code>/<code>p2</code> i koden over): henholdsvis 0.185 for <code>samp1</code> og 0.002 for <code>samp2</code>.</p>
+<p>P-verdi defineres som sannsynligheten for å få et resultat så ekstremt som det observert, viss null hypotesen er virkelig sann (<span class="citation" data-cites="spieg2019">Spiegelhalter (<a href="#ref-spieg2019" role="doc-biblioref">2019</a>)</span>, s. 264). Kva terskel man setter for p-verdien vil variere basert på type studie og ønsket effekt, men historisk sett så er den p&lt;0.05 sett på som statistisk signifikant. I vårt tilfelle er det kun <code>m2</code> som gir oss en p-verdi under 0.05, og er da statistisk signifikant. Samtidig er det viktig å understreke at p-verdien ikkje sier noko om sannheten til en hypotese eller at statistisk signifikans betyr at det har praktisk eller klinisk betydening (<span class="citation" data-cites="spieg2019">Spiegelhalter (<a href="#ref-spieg2019" role="doc-biblioref">2019</a>)</span>, s.297-303).</p>
+</section>
+<section id="spm-2-discuss-what-contributes-to-the-different-results-in-the-two-studies-m1-and-m2." class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="spm-2-discuss-what-contributes-to-the-different-results-in-the-two-studies-m1-and-m2."><span class="header-section-number">1.2</span> Spm 2: Discuss what contributes to the different results in the two studies (<code>m1</code> and <code>m2</code>).</h3>
+<p>Det første som burde påpekes er ulik utvalgsstørrelse på dei to modellene. Ved større utvalg blir estimatene gjerne mer presise fordi tilfeldige variasjoner glattes ut. For eksempel så vil standardfeilen bli påvirket av størrelsen på utvalget, ved at et større utvalg vil føre til en lavere standardfeil (ref formelen over), som igjen kan gi en mer signifikant t-verdi og lavere p-verdi. Dette er tilfelle i modellene våre over, der <code>m2</code> har et større utvalg som fører til en lavere standardfeil, mer signifikant t-verdi og lavere p-verdi sammenlignet med <code>m1</code> (<span class="citation" data-cites="spieg2019">Spiegelhalter (<a href="#ref-spieg2019" role="doc-biblioref">2019</a>)</span>, s.191-192).</p>
+<p>Den lave utvalgsstørrelsen i <code>m1</code> vil også føre til at tilfeldige variasjoner i datane vil kunne føre til at resultatene avviker mer fra den sanne populasjonsgjennomsnittet enn <code>m2</code>. Forskjellen i standardfeilen mellom dei to modellene, sier at det er forskjellig spredning i observasjonene. Den økte spredningen i <code>m1</code> vil bidra til mindre presise estimater, høyere p-verdi og mindre signifikante resultater (<span class="citation" data-cites="spieg2019">Spiegelhalter (<a href="#ref-spieg2019" role="doc-biblioref">2019</a>)</span>, s.195).</p>
+</section>
+<section id="spm-3-why-do-we-use-the-shaded-area-in-the-lower-and-upper-tail-of-the-t-distribution-see-fig-samp1." class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="spm-3-why-do-we-use-the-shaded-area-in-the-lower-and-upper-tail-of-the-t-distribution-see-fig-samp1."><span class="header-section-number">1.3</span> Spm 3: Why do we use the shaded area in the lower and upper tail of the t-distribution (See <a href="#fig-samp1" class="quarto-xref">Figure&nbsp;1</a>).</h3>
+<p>Dei skyggelagte områdene hjelper å visualisere kor sannsynlig eller usannsynlig den observerte t-verdien, gitt at nullhypotesen er sann (dvs. at <span class="math inline">\(\mu\)</span> = 1.5). Ved å skyggelegge begge halene visualiseres man sannsynligheten for å få en t-verdi enten på den positive eller negative siden. Dess mindre det skyggelagte området er, desto mindre er det at vi vil observere en så ekstrem t-verdi, og desto mer sannsynlig er det at vi kan forkaste nullhypotesen.</p>
+</section>
+</section>
+<section id="simulering-til-spørsmål-4-7" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="simulering-til-spørsmål-4-7"><span class="header-section-number">2</span> Simulering til spørsmål 4-7</h2>
+<p>Under er en kode som lagrer resultatet fra 1000 utførte studier, for å kunne utvikle en faktisk utvalgsdistrubisjon.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Lager data frames for å lagre modell estimater</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>results_8 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">estimate =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">1000</span>), </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">se =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">1000</span>), </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>                        <span class="at">pval =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">1000</span>), </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>                        <span class="at">n =</span> <span class="dv">8</span>)  </span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>results_40 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">estimate =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">1000</span>), </span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>                         <span class="at">se =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">1000</span>), </span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>                         <span class="at">pval =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">1000</span>), </span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>                         <span class="at">n =</span> <span class="dv">40</span>)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co"># En løkke som for å hente ut 1000 prøver(samples), hver iterasjon (i) vil </span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co"># hente ut en ny prøve fra populasjonen</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>) {</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Henter ut en prøve </span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  samp1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">y =</span> <span class="fu">sample</span>(population, <span class="dv">8</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>))</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  samp2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">y =</span> <span class="fu">sample</span>(population, <span class="dv">40</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>))</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Lager en lineær modell</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>  m1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> samp1)</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>  m2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> samp2)</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Henter ut verdier fra modellen</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>  results_8[i, <span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fu">coef</span>(<span class="fu">summary</span>(m1))[<span class="dv">1</span>, <span class="dv">1</span>]</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>  results_8[i, <span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">coef</span>(<span class="fu">summary</span>(m1))[<span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>  results_8[i, <span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="fu">coef</span>(<span class="fu">summary</span>(m1))[<span class="dv">1</span>, <span class="dv">4</span>]</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>  results_40[i, <span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fu">coef</span>(<span class="fu">summary</span>(m2))[<span class="dv">1</span>, <span class="dv">1</span>]</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>  results_40[i, <span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">coef</span>(<span class="fu">summary</span>(m2))[<span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>  results_40[i, <span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="fu">coef</span>(<span class="fu">summary</span>(m2))[<span class="dv">1</span>, <span class="dv">4</span>]</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Lagrer resultatene i en data frame</span></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(results_8, results_40)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Ved å bruke <code>results</code> datasettet, skal eg svare på følgende:</p>
+<section id="spm-4-calculate-the-standard-deviation-of-the-estimate-variable-and-the-average-of-the-se-variable-for-each-of-the-study-sample-sizes-8-and-40.-explain-why-these-numbers-are-very-similar.-how-can-you-define-the-standard-error-se-in-light-of-these-calculations" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="spm-4-calculate-the-standard-deviation-of-the-estimate-variable-and-the-average-of-the-se-variable-for-each-of-the-study-sample-sizes-8-and-40.-explain-why-these-numbers-are-very-similar.-how-can-you-define-the-standard-error-se-in-light-of-these-calculations"><span class="header-section-number">2.1</span> Spm 4: Calculate the standard deviation of the estimate variable, and the average of the se variable for each of the study sample sizes (8 and 40). Explain why these numbers are very similar. How can you define the Standard Error (SE) in light of these calculations?</h3>
+<p>I <strong>?@tbl-sum</strong> er det en oppsummering av standardavviket til <code>estimate</code> og gjennomsnittet av <code>se</code>:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtrer ut resultatene for n = 8 og n = 40</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>results_n8 <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span> <span class="fu">filter</span>(n <span class="sc">==</span> <span class="dv">8</span>) </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>results_n40 <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span> <span class="fu">filter</span>(n <span class="sc">==</span> <span class="dv">40</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Beregn standardavvik for estimate og gjennomsnitt for SE</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>summary_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>( </span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Sample Size"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">40</span>), </span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Standard Deviation of Estimate"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="fu">sd</span>(results_n8<span class="sc">$</span>estimate), <span class="fu">sd</span>(results_n40<span class="sc">$</span>estimate)), </span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Average SE"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="fu">mean</span>(results_n8<span class="sc">$</span>se), <span class="fu">mean</span>(results_n40<span class="sc">$</span>se)))</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Print tabellen med kable</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(summary_table, <span class="at">caption =</span> <span class="st">"Summary Statistics for Estimate and SE by Sample Size"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="tbl-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Summary Statistics for Estimate and SE by Sample Size
+</figcaption>
+<div aria-describedby="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<caption>Summary Statistics for Estimate and SE by Sample Size</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Sample.Size</th>
+<th style="text-align: right;">Standard.Deviation.of.Estimate</th>
+<th style="text-align: right;">Average.SE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1.0708432</td>
+<td style="text-align: right;">1.0213745</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">0.4838475</td>
+<td style="text-align: right;">0.4696954</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Standardavviket av estimatene vil fortelle hvor mykje estimatene vil variere fra prøve til prøve når vi trekker et tilfeldig utvalg av populasjonen - med andre ord vil det være den naturlige variasjonen i gjennomsnittet i utvalgene. Standardfeilen, har vi tidligere forklart, måler kor mykje vi forventer et estimat fra eit enkelt utvalg vil avvike fra det sanne gjennomsnittet av populasjonen. Begge disse målene er relatert til den variasjonen vil vi kunne se i dataene, og sier oss noko om usikkerheten rundt gjennomsnittet i utvalget.</p>
+<p>Standardfeilen kan på mange måter ses på som eit mål for preisjonen på estimatet (<span class="citation" data-cites="spieg2019">Spiegelhalter (<a href="#ref-spieg2019" role="doc-biblioref">2019</a>)</span>, s.231). I vårt tilfelle vil det si kor presist utvalgets gjennomsnitt estimerer populasjonens gjennomsnitt. Dess flere prøver man tar, vil standardfeilen nærme seg standardavviket av estimatene, fordi begge måler kor mykje estimatene varierer runndt det sanne gjennomsnittet.</p>
+</section>
+<section id="spm-5-create-a-histogram-see-example-code-below-of-the-p-values-from-each-study-sample-size.-how-do-you-interpret-these-histograms-what-do-they-tell-you-about-the-effect-of-sample-size-on-statistical-power" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="spm-5-create-a-histogram-see-example-code-below-of-the-p-values-from-each-study-sample-size.-how-do-you-interpret-these-histograms-what-do-they-tell-you-about-the-effect-of-sample-size-on-statistical-power"><span class="header-section-number">2.2</span> Spm 5: Create a histogram (see example code below) of the p-values from each study sample-size. How do you interpret these histograms, what do they tell you about the effect of sample size on statistical power?</h3>
+<p><a href="#fig-histo" class="quarto-xref">Figure&nbsp;2</a> under viser fordelingen av p-verdier for n = 8 og n = 40, basert på dei 1000 prøvene som har blitt generert.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>results <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(pval)) <span class="sc">+</span> </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.05</span>, <span class="at">fill =</span> <span class="st">"lightblue"</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span>  <span class="co"># Juster binwidth hvis nødvendig</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> n) <span class="sc">+</span>  <span class="co"># Lager ett histogram for n = 8 og ett for n = 40</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Histogram of p-values for Sample Sizes 8 and 40"</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"P-values"</span>,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Frequency"</span>) <span class="sc">+</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-histo" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-histo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assignment3_files/figure-html/fig-histo-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-histo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Histogram of p-values for Sample Sizes 8 and 40
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Basert på tidligere diskusjon rundt usikkerheten og variasjon rundt estimatene, vil vi forvente å se en fordeling med flere p-verdier som er høyere enn 0.05 og dermed ikkje statistisk signifikant for <em>n = 8</em>. Noe som kommer tydelig frem i <a href="#fig-histo" class="quarto-xref">Figure&nbsp;2</a>. For <em>n = 40</em> vil vi motsetning forvente at flere p-verdier som er lavere en 0.05, noe som vi også er tydelig i <a href="#fig-histo" class="quarto-xref">Figure&nbsp;2</a>.</p>
+<p><strong>Statistisk power</strong>, er beskrevet som sannsynligheten for å oppdage en sann effekt om den er tilstede (<span class="citation" data-cites="spieg2019">Spiegelhalter (<a href="#ref-spieg2019" role="doc-biblioref">2019</a>)</span>, s.285). I praksis kan vi tenke på at høgere statistisk power øker sjansen til å finne signifikante resulateter når det finnes en reel effekt.</p>
+<p>En faktor som vi så fint får visualisert i <a href="#fig-histo" class="quarto-xref">Figure&nbsp;2</a>, er at statistisk power avhenger av blant annet utvalgsstørrelsen. Basert på det vi observerer i histogrammet, vil vi med større sikkerhet si at vi står bedre egnet til å oppdage en sann effekt (her det sanne gjennomsnittet) ved n = 40.</p>
+</section>
+<section id="spm-6-calculate-the-number-of-studies-from-each-sample-size-that-declare-a-statistical-significant-effect-specify-a-threshold-for-your-alpha-significance-level." class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="spm-6-calculate-the-number-of-studies-from-each-sample-size-that-declare-a-statistical-significant-effect-specify-a-threshold-for-your-alpha-significance-level."><span class="header-section-number">2.3</span> Spm 6: Calculate the number of studies from each sample size that declare a statistical significant effect (specify a threshold for your <span class="math inline">\(\alpha\)</span>, significance level).</h3>
+<p>For at studiene fra hvert utvalg skal bli med i summeringen, må dei ha eit signifikansnivå på <span class="math inline">\(\alpha &lt; 0.05\)</span>. Under i <a href="#tbl-sig" class="quarto-xref">Table&nbsp;2</a> ser man oversikten av kor mange studier fra hvert utvalgsmål som er statistiske signifikante:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Beregn andelen signifikante resultater</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>sig_table <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(pval <span class="sc">&lt;</span> <span class="fl">0.05</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(n) <span class="sc">%&gt;%</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="st">`</span><span class="at">α</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">n</span>()<span class="sc">/</span><span class="dv">1000</span>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Lag en tabell med kableExtra</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(sig_table, <span class="at">digits =</span> <span class="dv">3</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"striped"</span>, <span class="st">"hover"</span>, <span class="st">"condensed"</span>), <span class="at">full_width =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="tbl-sig" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sig-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Proportion of Significant Results by Sample Size
+</figcaption>
+<div aria-describedby="tbl-sig-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table table-striped table-hover table-condensed do-not-create-environment cell caption-top table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">n</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">α</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0.227</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">0.865</td>
+</tr>
+</tbody>
+</table>
 
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section id="spm-7-using-the-pwr-package-calculate-the-power-of-a-one-sample-t-test-with-a-effect-size-of-1.53-your-specified-significance-level-and-sample-sizes-8-and-40.-explain-the-results-in-the-light-of-your-simulations." class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="spm-7-using-the-pwr-package-calculate-the-power-of-a-one-sample-t-test-with-a-effect-size-of-1.53-your-specified-significance-level-and-sample-sizes-8-and-40.-explain-the-results-in-the-light-of-your-simulations."><span class="header-section-number">2.4</span> Spm 7: Using the pwr package, calculate the power of a one-sample t-test, with a effect size of 1.5/3, your specified significance level and sample sizes 8 and 40. Explain the results in the light of your simulations.</h3>
+<p>I <a href="#tbl-pwr" class="quarto-xref">Table&nbsp;3</a> er det vist den statistiske poweren for dei ulike utvalgsstørrelsene. Som det ble nevnt tidligere, vil en høyere power styrke sannsynlighetene for å finne en signifikant forskjell viss den eksisterer, f.eks: en statistisk power på 0.8 tilsvarer at det er 80% sannsynlighet for at vi vil oppdage en statistisk forskjell viss den eksisterer.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Laster inn pwr og knitr pakken</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pwr)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Beregn statistisk styrke for n = 8 og n = 40</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>power_n8 <span class="ot">&lt;-</span> <span class="fu">pwr.t.test</span>(<span class="at">n =</span> <span class="dv">8</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">d =</span> <span class="fl">1.5</span><span class="sc">/</span><span class="dv">3</span>, <span class="at">type =</span> <span class="st">"one.sample"</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>power_n40 <span class="ot">&lt;-</span> <span class="fu">pwr.t.test</span>(<span class="at">n =</span> <span class="dv">40</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">d =</span> <span class="fl">1.5</span><span class="sc">/</span><span class="dv">3</span>, <span class="at">type =</span> <span class="st">"one.sample"</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Lag en tabell med resultatene</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>power_results <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Sample Size"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">40</span>),</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Power"</span> <span class="ot">=</span> <span class="fu">c</span>(power_n8<span class="sc">$</span>power, power_n40<span class="sc">$</span>power)</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Print tabellen pent med kable</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(power_results)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="tbl-pwr" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-pwr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Statistical Power for Different Sample Sizes
+</figcaption>
+<div aria-describedby="tbl-pwr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Sample.Size</th>
+<th style="text-align: right;">Power</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0.2320770</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">0.8693981</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Den lave styrken for n = 8 sammenglignet med n = 40 som vi ser i <a href="#tbl-pwr" class="quarto-xref">Table&nbsp;3</a>, henger sammen med at det var færre ikkje-signifikante tester for n = 8 versus n = 40 i <a href="#tbl-sig" class="quarto-xref">Table&nbsp;2</a>. Gjennomgående for når vi har sammenlignet dei statistiske parametrene mellom dei ulike utvalgene, er at eit større utvalg har gitt meir presisjon. Dette samsvarer godt med den statistiske poweren også: større utvalg vil øke sannsynligheten for signifikante resultater og økt statistisk power.</p>
+</section>
+<section id="spm-8-with-a-significance-level-of-5-how-many-studies-would-give-you-a-false-positive-result-if-you-did-many-repeated-studies" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="spm-8-with-a-significance-level-of-5-how-many-studies-would-give-you-a-false-positive-result-if-you-did-many-repeated-studies"><span class="header-section-number">2.5</span> Spm 8: With a significance level of 5%, how many studies would give you a “false positive” result if you did many repeated studies?</h3>
+<p>I koden under har eg laget et nytt datasett med resultater fra flere tilfeldige utvalg med n = 8 og n = 40, fra en populasjon med en gjennomsnittlig effekt på 0.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>population <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000000</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">3</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data frames to store the model estimates</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>results_8 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">estimate =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">1000</span>), </span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>                      <span class="at">se =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">1000</span>), </span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>                      <span class="at">pval =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">1000</span>), </span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>                      <span class="at">n =</span> <span class="dv">8</span>)  </span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>results_40 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">estimate =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">1000</span>), </span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>                      <span class="at">se =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">1000</span>), </span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>                      <span class="at">pval =</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">1000</span>), </span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>                      <span class="at">n =</span> <span class="dv">40</span>)</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="co"># A for loop used to sample 1000 studies, each iteration (i) will draw a new sample</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="co"># from the population. </span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>) {</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Draw a sample </span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>  samp1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">y =</span> <span class="fu">sample</span>(population, <span class="dv">8</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>))</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>  samp2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">y =</span> <span class="fu">sample</span>(population, <span class="dv">40</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>))</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Model the data</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>  m1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> samp1)</span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>  m2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> samp2)</span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Extract values from the models</span></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>  results_8[i, <span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fu">coef</span>(<span class="fu">summary</span>(m1))[<span class="dv">1</span>, <span class="dv">1</span>]</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>  results_8[i, <span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">coef</span>(<span class="fu">summary</span>(m1))[<span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>  results_8[i, <span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="fu">coef</span>(<span class="fu">summary</span>(m1))[<span class="dv">1</span>, <span class="dv">4</span>]</span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>  results_40[i, <span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fu">coef</span>(<span class="fu">summary</span>(m2))[<span class="dv">1</span>, <span class="dv">1</span>]</span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>  results_40[i, <span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">coef</span>(<span class="fu">summary</span>(m2))[<span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>  results_40[i, <span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="fu">coef</span>(<span class="fu">summary</span>(m2))[<span class="dv">1</span>, <span class="dv">4</span>]</span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the results in a combined data frame</span></span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a>results_null <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(results_8, results_40)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Videre har eg laget et histogram, <a href="#fig-histo0" class="quarto-xref">Figure&nbsp;3</a>, for å visualisere andelen av p-verdier for dei forskjellige utvalgsstørrelsene.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Lag histogrammer av p-verdiene med fasetter for hver utvalgsstørrelse</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>results_null <span class="sc">%&gt;%</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(pval)) <span class="sc">+</span> </span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.05</span>, <span class="at">fill =</span> <span class="st">"blue"</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span> </span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> n, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Histogram of P-values for Population with Mean Effect of Zero"</span>,</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"P-values"</span>,</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Frequency"</span>) <span class="sc">+</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-histo0" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-histo0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assignment3_files/figure-html/fig-histo0-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-histo0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Histogram of P-values for Population with Mean Effect of Zero
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Et “falskt positivt” resultat oppstår når p-verdien er mindre enn signifikansnivået (her <span class="math inline">\(\alpha &lt; 0.05\)</span>), selv om den sanne effekten i populasjonen er null (<span class="citation" data-cites="spieg2019">Spiegelhalter (<a href="#ref-spieg2019" role="doc-biblioref">2019</a>)</span>, s.278). I <a href="#tbl-falsk" class="quarto-xref">Table&nbsp;4</a> ser vi at selv om effekten på populasjonen er lik null, er det omtrent 5% av studiene for begge utvalgsstørrelsene som feilaktig viser en statistisk signifikant effekt. Dette demonstrer i praksis konseptet med et signifikansnivå (<span class="math inline">\(\alpha &lt; 0.05\)</span>), som betyr at vi tillater en 5% sjanse for å forkaste nullhypotesen når den er sann, bedre kjent som type I feil (<span class="citation" data-cites="spieg2019">Spiegelhalter (<a href="#ref-spieg2019" role="doc-biblioref">2019</a>)</span>, s.283).</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Beregn totalt antall tester og falske positive</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>total_tests <span class="ot">&lt;-</span> <span class="dv">1000</span>  <span class="co"># Antall tester</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>false_positives <span class="ot">&lt;-</span> results_null <span class="sc">%&gt;%</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(pval <span class="sc">&lt;</span> <span class="fl">0.05</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(n) <span class="sc">%&gt;%</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="st">"Antall falske positive"</span> <span class="ot">=</span> <span class="fu">n</span>(), </span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Falske positive (%)"</span> <span class="ot">=</span> (<span class="fu">n</span>() <span class="sc">/</span> total_tests) <span class="sc">*</span> <span class="dv">100</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Legg til totalt antall tester for å beregne ikke-signifikante resultater</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>false_positives <span class="ot">&lt;-</span> false_positives <span class="sc">%&gt;%</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="st">"Antall ikke-signifikante"</span> <span class="ot">=</span> total_tests <span class="sc">-</span> <span class="st">`</span><span class="at">Antall falske positive</span><span class="st">`</span>)</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Lag en tabell med kable og norske kolonnenavn</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(false_positives, <span class="at">caption =</span> <span class="st">"Resultater av falske positive og ikke-signifikante tester per utvalgsstørrelse"</span>, <span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="tbl-falsk" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-falsk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: Resultater av falske positive og ikke-signifikante tester per utvalgsstørrelse
+</figcaption>
+<div aria-describedby="tbl-falsk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<caption>Resultater av falske positive og ikke-signifikante tester per utvalgsstørrelse</caption>
+<colgroup>
+<col style="width: 4%">
+<col style="width: 32%">
+<col style="width: 28%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">Antall falske positive</th>
+<th style="text-align: right;">Falske positive (%)</th>
+<th style="text-align: right;">Antall ikke-signifikante</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">4.4</td>
+<td style="text-align: right;">956</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">4.9</td>
+<td style="text-align: right;">951</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+
+</section>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
